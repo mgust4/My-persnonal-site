@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    --cor-primaria: #3431e2;
+    --cor-secundaria: #6b3bc5;
+    --escuro: #343A40;
+}
+
+
+body {
+    background-color: rgb(3, 4, 31);
+    color: rgb(212, 212, 212);
+}
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 3rem;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.nav-perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-foto {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.nav-perfil strong {
+    display: block;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.nav-perfil span {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.nav-social {
+    background: #1f2937;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    display: flex;
+    gap: 1rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.nav-social a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+
+.menu-link{
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.menu-link::before{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::before {
+    width: 100%;
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    border-radius: 50%;
+    border: 4px solid rgb(202, 202, 202);   
+}
+
+h1{
+    font-size: 3.0rem;
+     color: var(--cor-primaria);
+     font-weight: bold;
+     margin: 20px;
+}
+
+.Cabecalho-sub-titulo {
+    font-size: 2rem;
+    color:azure;
+}
+
+.sobre{
+padding: 6rem 2rem;
+}
+
+.sobre-titulo{
+font-size: 2rem;
+color: rgb(255, 255, 255);
+text-align: center;
+margin-bottom: 20px;
+}
+
+.sobre-caixa{
+    padding: 2rem;
+    max-width: 800px;
+    margin: 1rem auto;
+    border-radius: 16px;
+    border: 1px solid rgba(79, 70, 229, 0.3);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);;
+}
+
+.sobre-paragrafo{
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.certificados{
+    padding: 6rem 2rem;
+}
+
+.certificados-caixa{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ;
+    gap: 2rem  ;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificados-card{
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(79, 70, 229, 0.3);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.certificados-titulo{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.certificados-card:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.certificados-imagem{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.caixa-textos-certificados{
+    padding: 1.5rem;
+}
+
+.paragrafo-certificados{
+color: rgb(226, 232, 240, 0.8);
+line-height: 1.25rem;
+}
+
+.info-certificados{
+    margin-bottom: 5px;
+}
+
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle at 10% 20%, rgb(0, 0, 40) 0%, transparent 70%),
+    radial-gradient(circle at 90% 80%, rgb(33, 2, 145) 0%, transparent 30%),
+    rgb(0, 0, 40);
+}
+
